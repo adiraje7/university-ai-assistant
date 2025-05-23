@@ -1,34 +1,39 @@
 # University AI Assistant 
 
-An AI-powered assistant that ingests PDFs and web pages (like university documents, syllabi, and FAQs), stores them in a Qdrant vector database using OpenAI embeddings, and lets users ask questions through a chat interface or desktop app.
+An AI-powered assistant that ingests PDFs and web pages (like university documents, syllabi, and FAQs), stores them in a Qdrant vector database using OpenAI embeddings, and lets users ask questions through a natural language interface using Chainlit or a desktop GUI.
 
-##  Features
+---
 
-- Upload and chunk PDFs with semantic splitting
+## Overview
+
+![Architecture Diagram](docs/assets/university_assistant_architecture.png)
+
+---
+
+## Features
+
+- Upload and chunk PDFs using semantic splitting
 - Scrape and embed university web pages
-- Store all content in a Qdrant vector DB (1536-dim OpenAI embeddings)
-- Natural language Q&A via OpenAI GPT models
-- Desktop GUI using Tkinter
-- Web chat interface using Chainlit
-- Function-calling support for structured questions (e.g., course, task, references)
+- Store content in Qdrant using OpenAI vector embeddings
+- Chat with your documents via GPT-powered interface
+- Desktop GUI built with Tkinter
+- Chainlit-based interactive web chat
+- LLM function-calling for task-specific structured queries
 
 ---
 
 ## Tech Stack
 
-- **Python** (LangChain, OpenAI, Qdrant)
-- **Chainlit** – lightweight chat UI
-- **Tkinter** – desktop management interface
-- **PyMuPDF**, **PyPDF2** – PDF extraction
-- **BeautifulSoup** – HTML parsing
-- **Strapi (optional)** – external Q&A reference source
+| Tool       | Purpose                               |
+|------------|----------------------------------------|
+| Python     | Core language                          |
+| LangChain  | Text chunking and processing           |
+| OpenAI     | Embeddings & Chat Completions          |
+| Qdrant     | Vector database                        |
+| Chainlit   | Web-based chat UI                      |
+| Tkinter    | Desktop management interface           |
+| PyMuPDF    | PDF page manipulation and extraction   |
+| BeautifulSoup | Web scraping and HTML parsing      |
 
 ---
 
-## Setup Instructions
-
-### 1. Clone this repo
-
-```bash
-git clone https://github.com/adiraje7/university-ai-assistant.git
-cd university-ai-assistant
