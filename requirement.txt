@@ -1,0 +1,13 @@
+python-dotenv
+openai
+qdrant-client
+PyPDF2
+langchain
+langchain_experimental 
+langchain_openai
+chainlit
+pymupdf
+tk
+shutil
+requests
+beautifulsoup4
